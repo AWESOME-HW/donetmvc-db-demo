@@ -8,7 +8,7 @@ public class UserService
     public List<User> CurrentUsers()
     {
         using var db = new UserContext();
-        var users = db.Users.Take(5).ToList();
+        var users = db.Users.Reverse().Take(5).ToList();
         return users;
     }
 
